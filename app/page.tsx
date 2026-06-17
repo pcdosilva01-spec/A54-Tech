@@ -5,18 +5,12 @@ import SlideCarousel from "@/components/SlideCarousel";
 import type { DeviceSpec, ComparisonData, SearchResult } from "@/types";
 
 const POPULAR_DEVICES: SearchResult[] = [
-  { id: "samsung-galaxy-s24-ultra", name: "Galaxy S24 Ultra", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg" },
-  { id: "samsung-galaxy-s24-plus", name: "Galaxy S24+", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-plus.jpg" },
-  { id: "samsung-galaxy-s24", name: "Galaxy S24", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24.jpg" },
-  { id: "samsung-galaxy-s23-ultra", name: "Galaxy S23 Ultra", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra.jpg" },
-  { id: "samsung-galaxy-s23-plus", name: "Galaxy S23+", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-plus.jpg" },
-  { id: "samsung-galaxy-s23", name: "Galaxy S23", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23.jpg" },
-  { id: "samsung-galaxy-s22-ultra", name: "Galaxy S22 Ultra", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-ultra.jpg" },
-  { id: "samsung-galaxy-z-fold5", name: "Galaxy Z Fold 5", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold-5.jpg" },
-  { id: "samsung-galaxy-z-flip5", name: "Galaxy Z Flip 5", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip-5.jpg" },
-  { id: "samsung-galaxy-a55", name: "Galaxy A55", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg" },
-  { id: "samsung-galaxy-a35", name: "Galaxy A35", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a35.jpg" },
-  { id: "samsung-galaxy-a15", name: "Galaxy A15", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a15.jpg" },
+  { id: "samsung_galaxy_s25_ultra-13114", name: "Galaxy S25 Ultra", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-ultra.jpg" },
+  { id: "samsung_galaxy_s24_ultra-12832", name: "Galaxy S24 Ultra", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra.jpg" },
+  { id: "samsung_galaxy_s24_plus-12833", name: "Galaxy S24+", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-plus.jpg" },
+  { id: "samsung_galaxy_s24-12834", name: "Galaxy S24", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24.jpg" },
+  { id: "samsung_galaxy_z_fold6-13041", name: "Galaxy Z Fold 6", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold-6.jpg" },
+  { id: "samsung_galaxy_z_flip6-13042", name: "Galaxy Z Flip 6", img: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip-6.jpg" },
 ];
 
 async function fetchDevice(id: string): Promise<DeviceSpec | null> {
