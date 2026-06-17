@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "fdn2.gsmarena.com" },
+      { protocol: "https", hostname: "cdn2.gsmarena.com" },
+      { protocol: "https", hostname: "fdn.gsmarena.com" },
+    ],
+  },
+  serverExternalPackages: ["gsmarena-api"],
 };
 
 export default nextConfig;
