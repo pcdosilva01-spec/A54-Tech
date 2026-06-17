@@ -18,7 +18,7 @@ export default function CoverSlide({ device1, device2, onNext }: CoverSlideProps
           <h1 className="text-primary font-bold text-5xl md:text-7xl tracking-tight text-center">
             COMPARATIVO
           </h1>
-          <span className="bg-primary text-white text-base md:text-lg px-6 py-2 rounded-full font-medium">
+          <span className="bg-primary text-gray-900 text-base md:text-lg px-6 py-2 rounded-full font-medium">
             Qual o melhor Galaxy?
           </span>
         </div>
@@ -34,7 +34,7 @@ export default function CoverSlide({ device1, device2, onNext }: CoverSlideProps
             ) : (
               <div className="w-full aspect-[3/4] bg-gray-100 rounded-xl flex items-center justify-center" />
             )}
-            <span className="bg-primary text-white text-lg md:text-xl px-6 py-3 rounded-full font-medium text-center w-full">
+            <span className="bg-primary text-gray-900 text-lg md:text-xl px-6 py-3 rounded-full font-medium text-center w-full">
               {device1?.name || "Selecione um aparelho"}
             </span>
           </div>
@@ -53,7 +53,7 @@ export default function CoverSlide({ device1, device2, onNext }: CoverSlideProps
             ) : (
               <div className="w-full aspect-[3/4] bg-gray-100 rounded-xl flex items-center justify-center" />
             )}
-            <span className="bg-primary text-white text-lg md:text-xl px-6 py-3 rounded-full font-medium text-center w-full">
+            <span className="bg-primary text-gray-900 text-lg md:text-xl px-6 py-3 rounded-full font-medium text-center w-full">
               {device2?.name || "Selecione um aparelho"}
             </span>
           </div>

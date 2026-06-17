@@ -29,7 +29,7 @@ export default function SpecsSlide({ device1, device2, prices, onPrev, onExport 
       </div>
 
       <div className="relative z-10 w-full max-w-6xl flex flex-col items-center gap-10">
-        <span className="px-6 py-2 bg-primary rounded-full text-white text-base md:text-lg font-medium whitespace-nowrap">
+        <span className="px-6 py-2 bg-primary rounded-full text-gray-900 text-base md:text-lg font-medium whitespace-nowrap">
           ESPECIFICAÇÕES
         </span>
 
@@ -42,13 +42,13 @@ export default function SpecsSlide({ device1, device2, prices, onPrev, onExport 
         >
           <div className="grid grid-cols-2 gap-8 md:gap-16 mb-12">
             <div className="flex flex-col items-center text-center">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">{device1.name}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">{device1.name}</h3>
               <ul className="space-y-4 text-left w-full max-w-xs mx-auto">
                 {specItems.map(({ label, key }) => (
-                  <li key={key} className="flex items-start gap-3 text-white text-base md:text-lg">
+                  <li key={key} className="flex items-start gap-3 text-gray-900 text-base md:text-lg">
                     <span className="font-medium text-lg flex-shrink-0">•</span>
                     <span className="font-medium">{label}</span>
-                    <span className="font-normal text-white/90 ml-auto text-right w-3/4 md:w-2/3 break-words">
+                    <span className="font-normal text-gray-900/90 ml-auto text-right w-3/4 md:w-2/3 break-words">
                       {device1.specs[key]}
                     </span>
                   </li>
@@ -58,13 +58,13 @@ export default function SpecsSlide({ device1, device2, prices, onPrev, onExport 
 
             <div className="relative flex flex-col items-center text-center">
               <div className="absolute left-0 top-0 bottom-0 w-px bg-white/30 hidden md:block" aria-hidden="true" />
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">{device2.name}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">{device2.name}</h3>
               <ul className="space-y-4 text-left w-full max-w-xs mx-auto">
                 {specItems.map(({ label, key }) => (
-                  <li key={key} className="flex items-start gap-3 text-white text-base md:text-lg">
+                  <li key={key} className="flex items-start gap-3 text-gray-900 text-base md:text-lg">
                     <span className="font-medium text-lg flex-shrink-0">•</span>
                     <span className="font-medium">{label}</span>
-                    <span className="font-normal text-white/90 ml-auto text-right w-3/4 md:w-2/3 break-words">
+                    <span className="font-normal text-gray-900/90 ml-auto text-right w-3/4 md:w-2/3 break-words">
                       {device2.specs[key]}
                     </span>
                   </li>
@@ -75,12 +75,12 @@ export default function SpecsSlide({ device1, device2, prices, onPrev, onExport 
 
           <div className="flex items-end justify-between gap-8 relative z-10">
             <div className="flex-1 text-left min-w-0">
-              <span className="font-serif text-4xl md:text-6xl font-bold text-white">
+              <span className="font-serif text-4xl md:text-6xl font-bold text-gray-900">
                 {prices.device1}
               </span>
             </div>
             <div className="flex-1 text-right min-w-0">
-              <span className="font-serif text-4xl md:text-6xl font-bold text-white">
+              <span className="font-serif text-4xl md:text-6xl font-bold text-gray-900">
                 {prices.device2}
               </span>
             </div>

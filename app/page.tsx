@@ -89,10 +89,10 @@ function DeviceSelector({
             className="w-full h-full object-cover"
           />
         </div>
-        <h3 className="text-xl font-semibold text-white text-center">{device.name}</h3>
+        <h3 className="text-xl font-semibold text-gray-900 text-center">{device.name}</h3>
         <button
           onClick={onClear}
-          className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium transition-colors"
+          className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-900 transition-colors"
         >
           Trocar
         </button>
@@ -102,7 +102,7 @@ function DeviceSelector({
 
   return (
     <div className="w-full max-w-md">
-      <label className="block text-sm font-medium text-white/70 mb-2">{label}</label>
+      <label className="block text-sm font-medium text-gray-600 mb-2">{label}</label>
       <div className="relative">
         <input
           type="text"
@@ -114,21 +114,21 @@ function DeviceSelector({
           }}
           onFocus={() => setShowResults(true)}
           placeholder="Digite o modelo..."
-          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+          className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
         />
         {showResults && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto">
+          <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl overflow-hidden z-50 max-h-96 overflow-y-auto shadow-lg">
             {isLoading ? (
-              <div className="p-4 text-center text-white/50">Buscando...</div>
+              <div className="p-4 text-center text-gray-500">Buscando...</div>
             ) : results.length === 0 ? (
-              <div className="p-4 text-center text-white/50">Nenhum dispositivo encontrado</div>
+              <div className="p-4 text-center text-gray-500">Nenhum dispositivo encontrado</div>
             ) : (
               <ul className="py-2">
                 {results.map((result) => (
                   <li
                     key={result.id}
                     onClick={() => handleSelect(result)}
-                    className="px-4 py-3 hover:bg-white/10 flex items-center gap-3 cursor-pointer transition-colors"
+                    className="px-4 py-3 hover:bg-gray-50 flex items-center gap-3 cursor-pointer transition-colors"
                   >
                     <img
                       src={result.img}
@@ -136,7 +136,7 @@ function DeviceSelector({
                       className="w-12 h-12 object-cover rounded-lg"
                       onError={(e) => { e.currentTarget.src = getPlaceholderImage(result.name); }}
                     />
-                    <span className="text-white font-medium">{result.name}</span>
+                    <span className="text-gray-900 font-medium">{result.name}</span>
                   </li>
                 ))}
               </ul>
@@ -201,7 +201,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-extrabold text-primary tracking-tight text-center mb-6">
               COMPARATIVO
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 text-center mb-16 max-w-2xl">
+            <p className="text-xl md:text-2xl text-gray-600 text-center mb-16 max-w-2xl">
               Escolha dois smartphones Galaxy para comparar lado a lado
             </p>
 
@@ -232,7 +232,7 @@ export default function Home() {
             )}
           </div>
         ) : (
-          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-white/50 text-lg">Carregando...</div></div>}>
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-gray-500 text-lg">Carregando...</div></div>}>
             <SlideCarousel comparison={comparison!} />
           </Suspense>
         )}
