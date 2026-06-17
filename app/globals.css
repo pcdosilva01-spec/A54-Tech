@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,12 +8,57 @@
 }
 
 :root {
-  --font-inter: 'Inter', sans-serif;
+  --color-primary: #0057D8;
+  --color-primary-hover: #0045A8;
+  --color-white: #FFFFFF;
+  --color-grid: #E8E8E8;
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
-  font-family: var(--font-inter), Arial, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.grid-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+@layer utilities {
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-primary-hover:hover {
+    background-color: var(--color-primary-hover);
+  }
 }
 
 ::-webkit-scrollbar {
@@ -26,3 +72,9 @@ body {
 }
 
 input::placeholder { opacity: 0.4; }
+
+@media (max-width: 640px) {
+  .grid-background {
+    background-size: 16px 16px;
+  }
+}
