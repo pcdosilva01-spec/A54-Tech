@@ -12,7 +12,7 @@ import JSZip from "jszip";
 interface Props {
   data: ComparisonData;
   variant: DesignVariant;
-  onVariantChange: () => void;
+  onVariantChange?: () => void;
 }
 
 const SLIDE_SIZE = 540;

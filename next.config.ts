@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "fdn.gsmarena.com" },
     ],
   },
-  serverExternalPackages: ["gsmarena-api"],
 };
 
 export default nextConfig;
